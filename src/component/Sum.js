@@ -8,7 +8,7 @@ class Sum extends Component {
     }
 
     handleNum1(e) {
-        console.log(e)
+        // console.log(e)
         const num1 = (e.target.value)
         this.setState(prevState => {
             return {
@@ -18,7 +18,7 @@ class Sum extends Component {
         })
     }
     handleNum2(e) {
-        console.log(e)
+        // console.log(e)
         const num2 = (e.target.value)
         this.setState(prevState => {
             return {
@@ -28,7 +28,7 @@ class Sum extends Component {
         })
     }
     handleSum(event) {
-        console.log(event.target.value)
+        // console.log(event.target.value)
         // const num1=this.setState({ num1: event.target.value });
         // const num2=this.setState({ num2: event.target.value });
         // this.setState({ result: num1 + num2 })
@@ -47,11 +47,11 @@ class Sum extends Component {
         return (
             <div className="container">
                 <div>
-                    <input text="text" onChange={this.handleNum1.bind(this)} value={this.state.num1}></input>
-                    <input text="text" onChange={this.handleNum2.bind(this)} value={this.state.num2}></input>
+                    <input aria-label="num1-input"  text="text" onChange={this.handleNum1.bind(this)} value={this.state.num1}></input>
+                    <input aria-label="num2-input"  text="text" onChange={this.handleNum2.bind(this)} value={this.state.num2}></input>
                 </div>
-                <button onClick={this.handleSum.bind(this)}>Sum</button>
-                <b>{this.state.result}</b>
+                <button aria-label="sum-button"   onClick={this.handleSum.bind(this)}>Sum</button>
+                <b aria-label="sum-output"  >{this.state.result}</b>
             </div>
         )
     }
